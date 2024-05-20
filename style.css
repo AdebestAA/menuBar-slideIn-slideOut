@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+}
+
+
+a {
+    color: white;
+    display: block;
+    text-decoration: none;
+
+}
+
+ul li {
+    list-style-type: none;
+
+}
+
+
+
+.third-section {
+
+    height: 40px;
+    width: 45px;
+    position: relative;
+
+}
+
+.third-section .btn-container {
+    position: absolute;
+    top: -7;
+    left: -6;
+    margin: 10px;
+    background-color: aqua;
+    height: 34px;
+    width: 34px;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn-container button {
+    width: 29px;
+    height: 3px;
+    border-radius: 5px;
+    border: none;
+    position: absolute;
+    background-color: white;
+    top: 15;
+    left: 3;
+
+}
+
+.btn-container button::after,
+.btn-container button::before {
+    content: '';
+    width: 30px;
+    height: 3px;
+    position: absolute;
+
+
+}
+
+button::before {
+    top: -8;
+    left: -1;
+    background-color: white;
+    border-radius: 5px;
+}
+
+button::after {
+    top: 8;
+    left: -1;
+    background-color: white;
+    border-radius: 5px;
+}
+
+ul {
+
+    background-color: navy;
+    position: absolute;
+    top: 48;
+    width: 10rem;
+    text-align: center;
+    transition: all 1s;
+    transform: translateX(116px);
+
+}
+
+
+:is(.section-three) ul {
+
+    transform: translateX(-111px);
+}
+
+
+
+ul li {
+    border-bottom: 2px solid white;
+    padding-block: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+:is(li:hover) a {
+    color: navy;
+}
+
+ul li:hover {
+    background-color: skyblue;
+    color: white;
+
+}
+
+
+
+.cancel {
+    padding-top: 2px;
+    margin-left: 8rem;
+    color: red;
+    font-weight: bold;
+
+}
+
+.cancel:hover {
+    color: white;
+    background-color: red;
+}
+
+
+/* animation section */
+
+
+:is(.section-three) .btn-container {
+    transform: rotate(720deg);
+    transition: all 1s;
+}
+
+
+
+
+
+
+:is(.section-three) button::before {
+    position: absolute;
+    transform: rotate(-40deg);
+    top: 1;
+    transition: all 1s;
+}
+
+:is(.section-three) button::after {
+    position: absolute;
+    transform: rotate(40deg);
+    top: 1;
+    transition: all 1s;
+
+}
+
+:is(.section-three) button {
+    background-color: transparent;
+}
+
+.cancel {
+    cursor: pointer;
+}
